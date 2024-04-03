@@ -115,10 +115,19 @@ public class TP4View extends javax.swing.JFrame {
     }//GEN-LAST:event_jtGradosActionPerformed
 
     private void jbConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConvertirActionPerformed
-        // TODO add your handling code here:
-        int gradosC = Integer.parseInt(jtGrados.getText());
-        int gradosF = gradosC * 9/5 + 32;
-        JOptionPane.showMessageDialog(this,"Grados Fahrenheit: " + gradosF + "°");
+
+        if (jtGrados.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Debes ingresar un número en grados Celsius.");
+        return; // Detener la ejecución del método si el campo está vacío
+        }
+        try {
+            int gradosC = Integer.parseInt(jtGrados.getText());
+            int gradosF = gradosC * 9/5 + 32;
+            JOptionPane.showMessageDialog(this, "Grados Fahrenheit: " + gradosF + "°");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Debes ingresar un número entero");
+        }
+        
     }//GEN-LAST:event_jbConvertirActionPerformed
 
     /**

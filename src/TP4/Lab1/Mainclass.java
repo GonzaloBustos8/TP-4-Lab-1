@@ -17,7 +17,8 @@ public class Mainclass {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        TP4View ventana = new TP4View();
+        ventana.setVisible(true);
         
 /** Armar grupo de no más de 4 integrantes para resolver el siguiente ejercicio.
 Utilizar GitHub, subir proyecto a repositorio y agregue compañeros como colaboradores.
