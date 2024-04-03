@@ -5,6 +5,10 @@
  */
 package TP4.Lab1;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +22,7 @@ public class TP4View extends javax.swing.JFrame {
      */
     public TP4View() {
         initComponents();
+         
     }
 
     /**
@@ -70,6 +75,7 @@ public class TP4View extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel2.setText("Temperatura en grados Celcius:");
 
+        jbConvertir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/TP4/imagenes/icono.png"))); // NOI18N
         jbConvertir.setText("CONVERTIR");
         jbConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +97,7 @@ public class TP4View extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(18, 18, 18)
                         .addComponent(jtGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,7 +108,7 @@ public class TP4View extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtGrados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jbConvertir)
                 .addGap(48, 48, 48))
         );
@@ -129,7 +135,9 @@ public class TP4View extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jbConvertirActionPerformed
-
+    
+  
+    
     /**
      * @param args the command line arguments
      */
